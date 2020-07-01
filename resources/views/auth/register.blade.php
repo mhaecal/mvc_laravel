@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Form</title>
+	<title>Register</title>
 </head>
 <body>
 	
@@ -9,12 +9,13 @@
 
 	<h3>Sign Up Form</h3>
 
-	<form action="welcome.html">
+	<form action="{{ url('welcome') }}" method="post">
+		@csrf
 		<p>First name:</p>
-		<input type="text">
+		<input type="text" name="firstname" id="firstname" required>
 
 		<p>Last name:</p>
-		<input type="text">
+		<input type="text" name="lastname" id="lastname" required>
 
 		<p>Gender:</p>
 		<input type="radio" name="gender"> Male <br>
